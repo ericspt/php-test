@@ -16,10 +16,13 @@
      *                (In console, simply run the command 'php run.php')
      * 
      */
-    
-    
+     
+    // I considered only comma, dot and spaces as delimiters for simplicity. 
     function containsWord($word, $sentence){
+        // Regular expression: split by dots, commas and whitespaces. One or more. 
+        // Also, consider the lowercase sentence
         $splitSentence = preg_split("/[\s,\.]+/", strtolower($sentence));
+        // Go through each word that was split and compare it to the word we were given
         foreach($splitSentence as $splitWord)
         {
             if($splitWord == strtolower($word))

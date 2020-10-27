@@ -51,6 +51,12 @@
         true
     );
 
+    // Test 9
+    $test->run(
+        containsWord('Aa', 'get. .aA. them!'),
+        true
+    );
+
 
 
 

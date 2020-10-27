@@ -1,5 +1,5 @@
 <?php 
-
+ 
     /* 
      *  Class       : Counter
      * 
@@ -45,18 +45,32 @@
     class Counter 
     {
         private $count = 0;
+        /**
+         * Counter constructor: can take an argument to initialise the count
+         */
         function __construct($count = 0)
         {
             $this->count = $count;
         }
+        /**
+         * Function:   Increments the count by 1 or a given value given as parameter
+         * Parameters: The value to increase the count with
+         */
         public function count($n = 1)
         {
             $this->count += $n;
         }
+        /**
+         * Function: Public function which gets the count
+         * Return:   The count class variable
+         */
         public function get()
         {
             return $this->count;
         }
+        /**
+         * Function: Public function which resets the counter to 0
+         */
         public function reset()
         {
             $this->count = 0;

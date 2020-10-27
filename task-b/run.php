@@ -47,6 +47,6 @@
 
     // Test 8
     $test->run(
-        generateSentence('The materials required',array('green'),'tiles'),
-        "The materials required: green tiles."
+        generateSentence('The materials required',array(),'tiles'),
+        "The materials required: "
     );
