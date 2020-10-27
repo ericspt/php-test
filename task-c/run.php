@@ -40,8 +40,14 @@
         $counter->get(),
         1
     );
-
-
+ 
+    // Test 5
+    $counter = new Counter();
+    $counter->count(-3);
+    $test->run(
+        $counter->get(),
+        -3
+    );
 
 
 

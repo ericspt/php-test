@@ -18,8 +18,14 @@
      */
     
     
-    function containsWord(){
-        
-        // Some comment...
-
+    function containsWord($word, $sentence){
+        $splitSentence = preg_split("/[\s,\.]+/", strtolower($sentence));
+        foreach($splitSentence as $splitWord)
+        {
+            if($splitWord == strtolower($word))
+            {
+                return true;
+            }
+        }
+        return false;
     }

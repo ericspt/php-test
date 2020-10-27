@@ -33,6 +33,24 @@
         false
     );
 
+    // Test 6
+    $test->run(
+        containsWord('get', 'aget them!\l'),
+        false
+    );
+
+    // Test 7
+    $test->run(
+        containsWord('get', '\lget them!'),
+        false
+    );
+
+    // Test 8
+    $test->run(
+        containsWord('a', 'get. .a. them!'),
+        true
+    );
+
 
 
 

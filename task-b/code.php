@@ -1,5 +1,5 @@
 <?php
-
+ 
     /* 
      *  Function    : generateSentence()
      * 
@@ -19,8 +19,77 @@
      */
 
     
-    function generateSentence(){
-        
-
-
+    function generateSentence($startString, $list, $optionals = NULL){
+        $finalList = "";
+        $finalList .= $startString . ": ";
+        $isString = false;
+        $optionalsSet = false;
+        if (isset($optionals))
+        {
+            $optionalsSet = true;
+            if (!is_array($optionals))
+            {
+                $isString = true;
+            }
+        }
+        $listCount = count($list);
+        for ($i = 0; $i < $listCount - 2; $i++)
+        {
+            $finalList .= $list[$i];
+            if ($optionalsSet)
+            {
+                $finalList .= " ";
+                if (!$isString)
+                {
+                    $finalList .=  $optionals[$i];
+                }
+                else
+                {
+                    $finalList .= $optionals;
+                }
+            }
+            $finalList .= ", ";
+        }
+        $lbo = $listCount - 2;
+        $last = $listCount - 1;
+        if ($lbo >= 0)
+        {
+            $finalList .= $list[$lbo] . " ";
+            if ($optionalsSet)
+            {
+                if (!$isString)
+                {
+                    $finalList .= $optionals[$lbo] . " and " . $list[$last] . " " . $optionals[$last];
+                }
+                else 
+                {
+                    $finalList .= $optionals . " and " . $list[$last] . " " . $optionals;
+                }
+            }
+            else
+            {
+                $finalList .= "and " . $list[$last];
+            }
+            $finalList .= ".";
+        }
+        else if ($last >= 0)
+        {
+            $finalList .= $list[$last];
+            if ($optionalsSet)
+            {
+                if (!$isString)
+                {
+                    $finalList .= " " . $optionals[$last] . ".";
+                }
+                else 
+                {
+                    $finalList .= " " . $optionals . ".";
+                }
+            }
+            else 
+            {
+                $finalList .= ".";
+            }
+        }
+        return $finalList;
     }

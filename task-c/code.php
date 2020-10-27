@@ -1,4 +1,4 @@
-<?php
+<?php 
 
     /* 
      *  Class       : Counter
@@ -42,8 +42,23 @@
      */
 
     
-    class Counter {
-        
-        
-
+    class Counter 
+    {
+        private $count = 0;
+        function __construct($count = 0)
+        {
+            $this->count = $count;
+        }
+        public function count($n = 1)
+        {
+            $this->count += $n;
+        }
+        public function get()
+        {
+            return $this->count;
+        }
+        public function reset()
+        {
+            $this->count = 0;
+        }
     }
