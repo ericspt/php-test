@@ -8,13 +8,10 @@ This test has been designed with three simple tasks to assess basic PHP proficie
 * Git
 * Git Bash
  
-## Instructions
+## Purpose of this repository
 
-1. Clone this Git repository.
-1. Complete Tasks A, B and C within each 'code.php' file under their respective directories.
-1. Test each implementation by executing `php run.php` via Git Bash or Command Prompt within each directory.
-1. Push your final code to your own public Git repository, or a private repository and providing @indejuice with access.
+This repository contains my answers to IndeJuice's PHP coding interview for students. 
 
 ## Submission
 
-Send the link of your Git repository to: tech@indejuice.com
+This repository is public to provide easy access for the IndeJuice team. Please do not copy my work if you are a candidate.
