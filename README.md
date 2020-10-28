@@ -1,4 +1,4 @@
-# Simple PHP Test
+# IndeJuice's Simple PHP Test
 
 This test has been designed with three simple tasks to assess basic PHP proficiency.
 
